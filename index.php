@@ -27,6 +27,7 @@ if(isset($_POST["cari"]))
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Daftar Mahasiswa</a></li>
+                <li><a href="http://localhost/13/registrasi.php">Registrasi</a></li>
             </ul>
             <!-- <form class="navbar-form navbar-right" role="search"> -->
             <form class="navbar-form navbar-right" action="" method="post">
