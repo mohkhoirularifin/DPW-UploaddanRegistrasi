@@ -2,22 +2,28 @@
     require 'functions.php';
 
     if(isset($_POST['submit'])){
-        if(tambah($_POST) > 0){
-            echo "
-                <script>
-                    alert('data berhasil disimpan');
-                    document.location.href='index.php';
-                </script>
-                ";
-        } else {
-            echo "
-            <script>
-                alert('data gagal disimpan');
-                document.location.href='tambah_data.php';
-            </script>";
-            echo "<br>";
-            echo mysqli_error($conn);
-        }
+        
+        
+        // cek isi dari post menggunakan vardump
+        var_dump($_POST);
+        var_dump($_FILES);
+        die();
+        // if(tambah($_POST) > 0){
+        //     echo "
+        //         <script>
+        //             alert('data berhasil disimpan');
+        //             document.location.href='index.php';
+        //         </script>
+        //         ";
+        // } else {
+        //     echo "
+        //     <script>
+        //         alert('data gagal disimpan');
+        //         document.location.href='tambah_data.php';
+        //     </script>";
+        //     echo "<br>";
+        //     echo mysqli_error($conn);
+        // }
     }
 ?>
 
@@ -59,18 +65,18 @@
         </nav>
         
         <h1 class="text-center">Tambah Data Mahasiswa</h1>
-        <form action="" method="POST" role="form">
+        <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                <label for="Nama">Nama:</label>
+                <label for="Nama">Nama: </label>
                 <input type="text" class="form-control" name="Nama" id="Nama" placeholder="Input field"required>
-                <label for="Nim">NIM:</label>
+                <label for="Nim">NIM :</label>
                 <input type="text" class="form-control" name="Nim" id="Nim" placeholder="Input field"required>
-                <label for="Email">Email</label>
+                <label for="Email">Email: </label>
                 <input type="text" class="form-control" name="Email" id="Email" placeholder="Input field"required>
-                <label for="Jurusan">Jurusan</label>
+                <label for="Jurusan">Jurusan: </label>
                 <input type="text" class="form-control" name="Jurusan" id="Jurusan" placeholder="Input field"required>
-                <label for="Gambar">Gambar</label>
-                <input type="text" class="form-control" name="Gambar" id="Gambar" placeholder="Input field"required>
+                <label for="Gambar">Gambar: </label>
+                <input type="file" class="form-control" name="Gambar" id="Gambar" placeholder="Input field"required>
 
                 </div>
                 <button type="submit" name="submit"> Tambah </button>
