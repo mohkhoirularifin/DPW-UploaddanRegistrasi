@@ -1,3 +1,23 @@
+<?php
+    require 'functions.php';
+
+    if (isset($_POST['register'])) 
+    {
+        if (registrasi($_POST) > 0) 
+        {
+            echo "
+                <style>
+                    alert('User berhasil ditambahkan');
+                </style>
+                ";
+        } else 
+        {
+            echo mysqly_error($conn);
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +53,6 @@
         </ul>
 
     </form>
-    
+
 </body>
 </html>
