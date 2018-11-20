@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://localhost/12/index.php">Daftar Mahasiswa</a>
+                <a class="navbar-brand" href="http://localhost/13/index.php">Daftar Mahasiswa</a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,9 +77,10 @@
         </nav>
         
         <h1>Update Data Mahasiswa</h1>
-        <form action="" method="POST" role="form">
+        <form action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <input type="hidden" name="id" value="<?= $mhs[id] ?>">
+                    <input type="hidden" name="GambarLama" value="<?= $mhs[Gambar]; ?>">
                     <label for="Nama">Nama:</label>
                     <input type="text" class="form-control" name="Nama" id="Nama" placeholder="Input field"required value="<?= $mhs[Nama]; ?>">
                     <label for="Nim">NIM:</label>
@@ -89,6 +90,7 @@
                     <label for="Jurusan">Jurusan</label>
                     <input type="text" class="form-control" name="Jurusan" id="Jurusan" placeholder="Input field"required value="<?= $mhs[Jurusan]; ?>">
                     <label for="Gambar">Gambar</label>
+                    <img src="image/<?= $mhs[Gambar];?>" alt="" height="100" width="100"><br>
                     <input type="text" class="form-control" name="Gambar" id="Gambar" placeholder="Input field"required value="<?= $mhs[Gambar]; ?>">
 
                 </div>
