@@ -5,25 +5,25 @@
         
         
         // cek isi dari post menggunakan vardump
-        var_dump($_POST);
-        var_dump($_FILES);
-        die();
-        // if(tambah($_POST) > 0){
-        //     echo "
-        //         <script>
-        //             alert('data berhasil disimpan');
-        //             document.location.href='index.php';
-        //         </script>
-        //         ";
-        // } else {
-        //     echo "
-        //     <script>
-        //         alert('data gagal disimpan');
-        //         document.location.href='tambah_data.php';
-        //     </script>";
-        //     echo "<br>";
-        //     echo mysqli_error($conn);
-        // }
+        // var_dump($_POST);
+        // var_dump($_FILES);
+        // die();
+        if(tambah($_POST) > 0){
+            echo "
+                <script>
+                    alert('data berhasil disimpan');
+                    document.location.href='index.php';
+                </script>
+                ";
+        } else {
+            echo "
+            <script>
+                alert('data gagal disimpan');
+                document.location.href='tambah_data.php';
+            </script>";
+            echo "<br>";
+            echo mysqli_error($conn);
+        }
     }
 ?>
 
@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://localhost/12/index.php">Daftar Mahasiswa</a>
+                <a class="navbar-brand" href="http://localhost/13/index.php">Daftar Mahasiswa</a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
